@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="t_style.css" />
+  </head>
+  <body>
+    <h1><p class="one">Tic Tac Toe</p></h1>
+    <div id="modeselect">
+      <p id="two">Select Mode:</p>
+      <button onclick="setmode('twoplayer')">Two Players</button>
+      <button onclick="setmode('oneplayer')">One Player</button>
+    </div>
+
+    <div id="game" class="hide">
+      <div class="gameboard">
+        <button id="b1" onclick="makemove(1)"></button>
+        <button id="b2" onclick="makemove(2)"></button>
+        <button id="b3" onclick="makemove(3)"></button>
+        <button id="b4" onclick="makemove(4)"></button>
+        <button id="b5" onclick="makemove(5)"></button>
+        <button id="b6" onclick="makemove(6)"></button>
+        <button id="b7" onclick="makemove(7)"></button>
+        <button id="b8" onclick="makemove(8)"></button>
+        <button id="b9" onclick="makemove(9)"></button>
+      </div>
+    </div>
+
+    <p id="print"></p>
+
+    <button id="resetBtn" onclick="myfunc_2()" class="hide">Reset</button>
+
+    <script src="nscript.js"></script>
+  </body>
+</html>

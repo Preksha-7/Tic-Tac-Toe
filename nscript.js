@@ -33,7 +33,7 @@ function makemove(position) {
     func();
 
     if (mode === "oneplayer" && flag === 0) {
-      setTimeout(cmove, 200); // Computer's move
+      setTimeout(cmove, 700); // Computer's move
     }
   }
 }

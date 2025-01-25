@@ -3,22 +3,15 @@ let flag = 1;
 let board = ["", "", "", "", "", "", "", "", ""];
 
 function setmode(selectmode) {
-  // Set the game variable to selected mode
   mode = selectmode;
-  //Hide selection mode ui
   document.getElementById("modeselect").classList.add("hide");
-  // show the game UI
   document.getElementById("game").classList.remove("hide");
-  // Update UI to indicate it is player X turn
   document.getElementById("print").innerText = "Player X's Turn";
-  // Show the reset button along with the grid
   document.getElementById("resetBtn").classList.remove("hide");
 }
 
 function makemove(position) {
-  // Check if specified position is empty for 0 based indexing
   if (board[position - 1] === "") {
-    // If flag is 1 , it is X's turn
     if (flag === 1) {
       document.getElementById("b" + position).innerText = "X"; // Sets the value of button at specified position to be X
       board[position - 1] = "X"; // Update the array to record move of player X
@@ -79,8 +72,7 @@ function findwinmove(symbol) {
   ]; //Array of winning combos
 
   for (let combo of wincomb) {
-    // Iterates through the wincomb array
-    let [index1, index2, index3] = combo; // Stores value in combo to three individual variables- Destructuring indices
+    let [index1, index2, index3] = combo; 
     if (
       board[index1] === symbol &&
       board[index2] === symbol &&
@@ -141,7 +133,7 @@ function func() {
     (b4 == "O" && b5 == "O" && b6 == "O") // Conditions for player O to win
   ) {
     document.getElementById("print").innerHTML = "Player O won";
-    disableAll(); // everything is disabled after the winning message is displayed
+    disableAll(); 
   } else if (board.indexOf("") === -1) {
     document.getElementById("print").innerHTML = "Match Tie"; // Match tie condition
   } else {
